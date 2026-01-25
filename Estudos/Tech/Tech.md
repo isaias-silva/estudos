@@ -1,4 +1,4 @@
-Todos os meus estudos sobre tecnologia se encontram aqui.
+Todos os meus estudos sobre desenvolvimento e arquitetura de sistemas se encontram aqui,.
 - [[Devops]]
 - [[Arquitetura]]
 - [[Linguagens de programação]]
