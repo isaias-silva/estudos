@@ -20,7 +20,7 @@ syncronized(this){
 }
 ```
 
-oque estiver entre parenteses no bloco syncronized é oque será trancado impedindo que outras threads acessem[^1], no caso do this, bloqueia-se o objeto onde aquele bloco é executado, mas pode-se bloquear qualquer outro objeto.
+oque estiver entre parenteses no bloco synchronized é oque será trancado impedindo que outras threads acessem[^1], no caso do this, bloqueia-se o objeto onde aquele bloco é executado, mas pode-se bloquear qualquer outro objeto.
 
 
 > [!INFO] 
