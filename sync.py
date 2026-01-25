@@ -17,7 +17,8 @@ def sync_on_github():
         subprocess.run(["git", "add", "."])
         subprocess.run(["git", "commit", "-m", message])
         subprocess.run(["git", "push"])
-
+    else:
+        print("nenhuma mudança ocorreu.")
 
 def get_commit_description(output: str):
     updateds = re.findall(r"(?<=M ).+", output)
