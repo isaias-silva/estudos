@@ -15,7 +15,7 @@ palavra reservada responsável por impedir a **Race Condition**, o bloco synchro
 
 ```java
 
-syncronized(this){
+synchronized(this){
 	count++
 }
 ```
@@ -55,8 +55,42 @@ as Threads em java possuem 6 possíveis estados:
 para consultar o estado da thread basta executar o método `.getState()` na instância da thread.
 
 ### Thread Join
+método de instância que serve para fazer a thread atual(geralmente a main) esperar até que a  outra  thread chegue no status TERMINATED.
 
-### Thread Wait
+```java
+tarefa.start();
+tarefa.join(); //a thread atual tranca até a tarefa ser concluída
+System.out.println("tarefa concluída")
+```
+### Thread Wait e Notify
+Métodos  presentes em todo [[Objeto]]  java, instanciado de **Object**(classe base), ambos os métodos são executados dentro de um bloco synchronized.
+#### Wait:
+solta o monitor [^1] do objeto e a thread entra em estado **WAITING**, e libera o objeto(recurso) para que outra thread possa utilizar, pode-se adicionar um timeout.
+#### Notify:
+avisa a thread que deu wait e está esperando aquele recurso que já pode ser utilizado. recomenda-se utiliza **notifyAll** devido a notify selecionar uma thread aleatória.
+
+```java
+//Thread A
+synchronized(resource){
+
+//while no lugar de if evita Race condition, após o wait a thread entra em estado waiting
+
+	while(resource.getStatus()!="listen"){
+		resource.wait();
+	}
+	
+	resource.save(this.data)
+
+}
+
+//Thread B
+synchronized(resource){
+	resource.load();
+	resource.notifyAll();//o notify all acorda a thread que entrou em estado waiting
+}
+
+
+```
 
 ### Thread Sleep:
 
@@ -69,6 +103,15 @@ Thread.sleep(1000)//a thread atual irá pausar por 1 segundo
 ```
 
 
+Hoje existem formas mais modernas de trabalhar com threads como:
+ -  interface [[Lock]] com sua implementação ReentrantLock.
+ -  [[ExecutorService]] para gerenciamento de threads.
+ - [[AtomicVariables]] 
+ - [[CompletableFuture]]
+ - [[Virtual Threads]]
+ 
+
+
 
 
 [^1]:  funcionamento de [[Lock]] no bloco synchronized:
@@ -76,3 +119,5 @@ Thread.sleep(1000)//a thread atual irá pausar por 1 segundo
 
 
 [^2]: o Garbage Collector, responsável por limpar lixo e liberar memória da JVM executa em uma thread Daemon.
+
+
