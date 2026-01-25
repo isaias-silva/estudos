@@ -9,7 +9,9 @@ load_dotenv()
 def sync_on_github():
     print("sync on github...")
 
-    result = subprocess.run(["git", "status", "-sb"], capture_output=True, text=True)
+    result = subprocess.run(
+        ["git", "status", "-sb"], capture_output=True, text=True
+    )
 
     if "M" in result.stdout or "??" in result.stdout:
         message = get_commit_description(result.stdout)
@@ -19,6 +21,7 @@ def sync_on_github():
         subprocess.run(["git", "push"])
     else:
         print("nenhuma mudança ocorreu.")
+
 
 def get_commit_description(output: str):
     updateds = re.findall(r"(?<=M ).+", output)
