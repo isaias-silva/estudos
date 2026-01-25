@@ -1,0 +1,1 @@
+Classes filhas devem ser substituíveis por classes pais sem afetar o sistema. 

@@ -1,0 +1,1 @@
+Edição java para sistemas embarcados, raramente utilizado atualmente.
