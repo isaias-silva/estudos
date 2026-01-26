@@ -44,6 +44,9 @@ locker.unlock();
 ```
 
 ### principais métodos:
+
+### Lock
+
 **.lock:**  adquire o bloqueio 
 
 **.lockInterruptibly**:  adquire o bloqueio, mas permite que a thread seja interrompida enquanto espera.
@@ -51,3 +54,35 @@ locker.unlock();
 .**tryLock:**  tenta adquirir o bloqueio  caso não consiga retorna false.
 
 **.tryLock(Long tile, TImeUnit unit)**: tenta pegar bloqueio por um tempo determinado.
+
+**.unlock**: libera a thread deve sempre ser chamado no bloco finally.
+
+**.newCondition**: cria uma nova Condition.
+
+### ReentrantLock:
+
+- **`isLocked()`**: Verifica se o cadeado está ocupado por qualquer thread.
+    
+- **`isHeldByCurrentThread()`**: Verifica se **esta** thread específica é quem segura o cadeado.
+    
+- **`getHoldCount()`**: Retorna quantas vezes a thread atual "entrou" no cadeado (já que ele é reentrante).
+    
+- **`getQueueLength()`**: Estima quantas threads estão na fila esperando por esse cadeado.
+    
+- **`hasWaiters(Condition condition)`**: Pergunta se há alguém dormindo em uma sala específica.
+
+### Condition
+
+**.await**: faz a thread dormir e soltar lock  até ser sinalizada assim como *wait*
+
+**.awaitUninterruptibly**:  Dorme e ignora interrupções até ser sinalizada.
+
+.**awaitNanos(long nanos)** :  Dorme por um tempo máximo em nanosegundos.
+
+**.await(long time, TimeUnit unit)**:   Dorme por um tempo determinado. Retorna `false` se o tempo acabou.
+
+.**awaitUntil(Date deadline)**:   Dorme até uma data/hora específica.
+
+**.signal()**:   Acorda **uma** thread que está nesta sala de espera (como o `notify()`).
+
+.**signalAll()**:   Acorda **todas** as threads nesta sala de espera (como o `notifyAll()`).
