@@ -18,4 +18,3 @@ public class Machine{
 
 a propriedade nunca é acessada diretamente evitando acesso indevido e conservando o estado dentro do objeto.
 
-#poo

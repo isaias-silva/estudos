@@ -7,4 +7,3 @@ são esses:
 [[Interface segregation]]
 [[dependency inversion]]
 
-#poo 
