@@ -19,7 +19,7 @@ possui [[edições]] especificas para o tipo de desenvolvimento.
 - [[enums]]
 - [[Records]]
 - [[Generics]]
--  [[estruturas de dados]]
+-  [[Collections]]
 - [[Streams]]
 - [[lambda]]
 - [[Annotations]]

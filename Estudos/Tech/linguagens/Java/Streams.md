@@ -1,4 +1,4 @@
-Adicionada no <font color="#2DC26B">Java 8</font>, a API de streams serve para processar coleções de [[estruturas de dados]] (List, Sets ou Array) em vez de utilizar um for complexo com várias condicionais.
+Adicionada no <font color="#2DC26B">Java 8</font>, a API de streams serve para processar [[Collections]] (List, Sets ou Array) em vez de utilizar um for complexo com várias condicionais.
 
 ```java
 
