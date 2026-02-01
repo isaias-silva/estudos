@@ -7,7 +7,7 @@ def getCommitMessageWithAI(prompt):
 
     memory = [
         SystemMessage(
-            content="você é um especialista em git que compara diff de arquivos e escreve mensagens apropriadas para commits, você retorna apenas a mensagem de commit em português baseado nas mudanças, sem nada adicional."
+            content="você é um especialista em git que compara diff de arquivos e escreve mensagens apropriadas para commits, você retorna apenas a mensagem de commit em português baseado nas mudanças e com foco em commit semântico, sem nada adicional."
         ),
         HumanMessage(content=prompt),
     ]
