@@ -1,7 +1,7 @@
 Estrutura que não permite duplicatas.
 
 ### Implementações:
-- **HashSet**:  uso de tabela hash para armazenar elementos, é ideal quando o assunto é performasse.
+- **HashSet**:  uso de tabela hash para armazenar elementos, é ideal quando o assunto é performance.
 
 - **LinkedHashSet**:  variação que usa uma lista duplamente ligada, ideal quando o assunto é ordem de inserção.
 

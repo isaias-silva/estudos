@@ -8,10 +8,12 @@ possui [[edições]] especificas para o tipo de desenvolvimento.
 ### tópicos:
 
 - [[Tipos]]
+- [[operadores]]
 - [[Classe]]
 - [[Objeto]]
 - [[Métodos]]
 - [[Condicionais e loops]]
+- [[Throwable]]
 - [[Pojos]]
 - [[modificadores de acesso]]
 - [[modificadores de comportamento]]
