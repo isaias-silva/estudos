@@ -7,6 +7,11 @@ Contexts and Dependency Injection, tecnologia padrão de injeção de dependênc
 
 O motor do CDI é o CDI container responsável por criar e gerenciar objetos.
 
+### Packages
+
+- `jakarta.enterprise.context`
+- `jakarta.inject`
+
 
 ## bean
 

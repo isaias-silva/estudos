@@ -30,7 +30,7 @@ public class TheClass{
 
 final String propertie;
 
-	public Thecclass(String propertie){
+	public Theclass(String propertie){
 		this.propertie = propertie;
 	}
 

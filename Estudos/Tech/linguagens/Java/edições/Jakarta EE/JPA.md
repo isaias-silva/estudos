@@ -1,4 +1,4 @@
-**Java Persistence Api**, especificação padrão java para trabalhar com banco de dados utilizando objetos.
+*Java Persistence API*, especificação padrão java para trabalhar com banco de dados utilizando objetos.
 
 JPA permite o mapeamento de classes Java para tabelas de bancos de dados(Object Relational Mapping - ORM).
 
