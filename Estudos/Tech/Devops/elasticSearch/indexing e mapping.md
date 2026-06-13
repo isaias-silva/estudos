@@ -40,9 +40,24 @@ definidos pelo atributo type
 - **long,  integer, double**: Usado para valores inteiros.
 
 ### analyzers:
+define como campo text deverá ser processado tanto no indexing tanto quanto na busca.
+##### Etapas do analyzer
+```mermaid
+flowchart LR
+TB([texto bruto])
+TN([texto normalizado])
+T([tokens])
+TS([tokens filtrados])
+CF(character filter)
+TK(tokenizer)
+TF(token filter)
 
+TB--->CF--->TN--->TK--->T--->TF--->TS
 
+```
 
+> [!info]
+>  Analyzers só funcionam em propriedades do tipo text
 ### Indexing
 Indexing é a inserção de documento onde texto é tokenizado e o índice é invertido.
 

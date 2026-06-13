@@ -22,7 +22,23 @@ Elastic Stack é uma plataforma de código aberto composta pelo ElasticSearch, [
 - [[índice]]
 - [[cluster]]
 
-![[index-cluster-doc.png]]
+```mermaid
+graph TD
+
+P(pesquisa)
+P --- S1
+P --- S2
+S1(shard 1) --- A
+S2(shard 2) --- E
+A(Indice) --- B(documento)
+A(Indice) --- C(documento)
+A(Indice) --- D(documento)
+
+E(Indice) --- F(documento)
+E(Indice) --- G(documento)
+E(Indice) --- H(documento)
+
+```
 
 ## Elasticsearch 7
 
@@ -31,9 +47,10 @@ Elastic Stack é uma plataforma de código aberto composta pelo ElasticSearch, [
 -  Java "bundle"
 - Replicação cross-cluster.
 - Index Life-cycle.
-- HLRC: cliente java Rest
+- **HLRC**: cliente java Rest
 
 ### tópicos:
 
 [[indexing e mapping]]
 [[busca e consulta]]
+[[Agregação]]

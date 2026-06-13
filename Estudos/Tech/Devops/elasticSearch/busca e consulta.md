@@ -90,3 +90,18 @@ uma consulta complexa utiliza a chave "bool", importante para conectivos lógico
 }}
 ```
 
+### Paginação 
+
+definido pelos parâmetros:
+- size: quantos documentos retornar por página.
+- from quantos documentos pular.
+
+```json
+
+{
+"from":10,
+"size":10,
+
+"query":...
+}
+```
