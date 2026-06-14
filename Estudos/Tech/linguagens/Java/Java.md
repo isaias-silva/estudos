@@ -20,6 +20,7 @@ possui [[edições]] especificas para o tipo de desenvolvimento.
 - [[interfaces]]
 - [[enums]]
 - [[Records]]
+- [[Optional]]
 - [[Generics]]
 -  [[Collections]]
 - [[Streams]]
